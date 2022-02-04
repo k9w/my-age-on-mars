@@ -26,7 +26,10 @@ Expected output:
 
 To achieve this:
 
-Define a class object with the following properties.
+Define a class object Planet Orbits with the following properties as
+constants.
+
+PlanetOrbits, UserAgeAndLifeExpectancy
 
 Planet 	       Planet's year in Earth years
 

@@ -85,10 +85,11 @@ You can find more of my work at:
 
 ## License
 
-The code originated in this project is covered by the [ISC
-License](https://choosealicense.com/licenses/isc). See the file
+The code which originated in this project is covered by the [ISC
+License](https://choosealicense.com/licenses/isc). See the file called
 [LICENSE](https://github.com/k9w/super-galactic/blob/main/LICENSE) in
-this same folder for copyright info.
+this same folder for distribution and liability terms as well as
+copyright holder info.
 
 _Third-party packages are subject to their own license and copyright._
 
