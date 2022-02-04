@@ -1,17 +1,22 @@
-# (Application Name)
+# Super Galactic Age Calculator
 
-#### (Brief Description of Application)
+#### Calculate the age of celestial bodies
 
-#### By (Your Name Here)
+#### By _Kevin Williams_
 
 ## Technologies Used
 
-* _List all_
-* _the major technologies_
-* _you used in your project_
-* _here_
+* _JavaScript_
+* _jQuery_
+* _npm_
+* _Webpack_
+* _Jest_
+* _esLint_
+* _Babel_
 
 ## Description
+
+Welcome to my second Independent Project in Intermediate JavaScript at Epicodus.
 
 ## Setup/Installation Requirements
 

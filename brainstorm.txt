@@ -1,0 +1,2 @@
+This plaintext document outlines my thought process while designing
+this application.
