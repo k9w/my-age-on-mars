@@ -1,18 +1,18 @@
 # Super Galactic Age Calculator
 
-#### Calculate the age of celestial bodies
+#### Calculate your age based on orbits of Celestial Bodies
 
 #### By _Kevin Williams_
 
 ## Technologies Used
 
-* _JavaScript_
-* _jQuery_
-* _npm_
-* _Webpack_
-* _Jest_
-* _esLint_
-* _Babel_
+* _[JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)_
+* _[jQuery](https://jquery.com/)_
+* _[npm](https://www.npmjs.com)_
+* _[Webpack](https://webpack.js.org)_
+* _[Jest](https://jestjs.io)_
+* _[ESLint](https://eslint.org)_
+* _[Babel](https://babeljs.io)_
 
 ## Description
 
@@ -34,19 +34,25 @@ You can find more of my work at:
 
 ## Setup/Installation Requirements
 
-* _Fork the project to your own Github if you plan to make changes._
-* _Clone the project and cd into it._
+* _Fork the project to your own Github repository if you plan to make
+  changes._
+* _Clone the project from your repo to your machine or preferred
+  location and cd into its folder._
 * _Install webpack and other packages listed above and in package.json
   with 'npm install'._
-* _Build and bundle the project from src/ folder into dist/ folder
-  with 'npm run build' or 'npm run start'._
+* By default, the packages are installed locally
+  to the project folder. That way, if you decide to not continue with
+  the project, you can cleanly remove it and all its dependencies by
+  just deleting the project folder.
+* _Build and bundle the project from the src/ folder into the dist/
+  folder with 'npm run build' or 'npm run start'._
 * _Run the pre-defined tests with 'npm run test'._
 * _Observe what the application does._
 * _To add to and improve the project with Test-Driven Development
   rules, add your ideas to brainstorming.txt. Then modify or add to
-  the tests first, then write new code._
-* _I welcome issues, and pull requests especially. I hope you enjoy
-  it._
+  the tests first, then write new code and see if the tests pass._
+* _If you like this project, please contribute issues and especially
+  pull requests to improve it._
 
 ## Known Bugs
 
@@ -59,6 +65,8 @@ You can find more of my work at:
 
 See [LICENSE](https://github.com/k9w/super-galactic/blob/main/LICENSE)
 for copyright info.
+
+_Third-party packages are subject to their own license and copyright._
 
 ## Contact Information
 

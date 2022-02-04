@@ -2,3 +2,9 @@ This plaintext document outlines my thought process while designing
 this application.
 
 Solar-year = 365 Earth-days
+
+Calculate the length of solar years, in Earth days, for each planet
+and planet-like body.
+
+88 days for Mercury, for example.
+
