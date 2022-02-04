@@ -16,7 +16,7 @@
 
 ## Description
 
-Welcome to my second Independent Project in Intermediate JavaScript at
+Welcome to my second Independent Project for Intermediate JavaScript at
 [Epicodus](https://epicodus.com).
 
 I started it on Friday February 4th 2022. [This project's
@@ -43,10 +43,13 @@ You can find more of my work at:
 * _Install webpack and other packages listed above and in package.json
   by typing 'npm install' just one time._
 
-* By default, the packages are installed locally
-  to the project folder. That way, if you decide to not continue with
-  the project, you can cleanly remove it and all its dependencies by
-  just deleting the project folder.
+* The decision to install specific, OLD, versions of these packages
+  was dictated by the curriculum assignment.
+
+* By default, the packages are installed locally to the project
+  folder. That way, if you decide to not continue with the project,
+  you can cleanly remove it and all its dependencies by just deleting
+  the project folder.
 
 * _Build and bundle the project from the src/ folder into the dist/
   folder with 'npm run build' to just build it or 'npm run start' to
