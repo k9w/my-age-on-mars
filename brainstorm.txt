@@ -1,2 +1,4 @@
 This plaintext document outlines my thought process while designing
 this application.
+
+Solar-year = 365 Earth-days
