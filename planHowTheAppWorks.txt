@@ -3,7 +3,8 @@ this application.
 
 Solar-year = 365 Earth-days
 
-Let's not consider leap years.
+Let's not consider leap years. In fact we'll only work with units of
+years, not days.
 
 
 Expected input:
@@ -15,8 +16,7 @@ Expected input:
  - User does not pick a planet
 
 
-Display output for each planet listed in the next section
-below. Expected output:
+For each planet listed in the next section below, output this:
 
  - The user's age in that planet's years.
 
@@ -47,7 +47,7 @@ initial properties:
 
  - userLifeExpectancyInput
 
-Additional properties can be added from methods defined below..
+Additional properties can be added from methods defined below.
 
 
 Instantiate a class object planetOrbits from its constructor.
@@ -59,7 +59,7 @@ constructor.
 
 Define a method earthYearsRemainingToLive to subtract the user's
 current age from the life expectancy they entered to get Earth years
-remaining to live. If the user's age is higher than the life
+remaining to live. If the user's age is higher than their life
 expectancy, instead output the number of years the user has lived past
 their life expectancy.
 
