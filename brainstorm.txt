@@ -3,8 +3,14 @@ this application.
 
 Solar-year = 365 Earth-days
 
-Calculate the user's age based on the length of solar years, in Earth
-days, for each planet and planet-like body.
+Let's not consider leap years.
 
-88 days for Mercury, for example.
+Expected input:
+User's age
+User's life expectancy
+User's chosen planet
+
+Expected output:
+The user's age in other-planet-based years. 
+The user's years remaining to live in other-planet-based years.
 

@@ -1,6 +1,6 @@
 # Super Galactic Age Calculator
 
-#### Calculate your age based on orbits of Celestial Bodies
+#### Convert your age from Earth years to other-planet-based years
 
 #### By _Kevin Williams_
 
