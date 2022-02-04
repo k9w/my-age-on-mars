@@ -15,16 +15,19 @@ Expected input:
  - User does not pick a planet
 
 
-Expected output:
-
- - Display output for each planet listed in the next section below.
+Display output for each planet listed in the next section
+below. Expected output:
 
  - The user's age in that planet's years.
 
- - The user's years remaining to live, based on that planet's years.
+ - The user's years remaining to live, based on that planet's
+   years. OR
+
+ - The user's years lived past their life expectancy, based on that
+   planet's years.
 
 
-To achieve this, do this:
+To achieve that, do this:
 
 Define a class object constructor PlanetOrbits with the following
 properties and values as constants.
@@ -38,13 +41,13 @@ Jupiter	       11.86
 
 
 Define a class object constructor UserAgeAndLifeExpectancy with
-properties:
+initial properties:
 
  - userAgeInput
 
  - userLifeExpectancyInput
 
-Additional properties can be added conversion and looping methods.
+Additional properties can be added from methods defined below..
 
 
 Instantiate a class object planetOrbits from its constructor.
@@ -82,7 +85,7 @@ each of these inputs:
  - earthYearsLivedPastTheLifeExpectancy
 
 For each planet, multiply or divide the number value by the constant
-stored for each planet property.
+stored for that planet property in object planetOrbits.
 
 
 For example, here is how it would look with
