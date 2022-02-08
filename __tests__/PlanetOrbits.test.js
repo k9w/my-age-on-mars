@@ -1,5 +1,5 @@
 
-import {PlanetOrbits} from '../src/js/age.js';
+import {PlanetOrbits} from '../src/js/PlanetOrbits.js';
 
 describe('PlanetOrbits', () => {
 
