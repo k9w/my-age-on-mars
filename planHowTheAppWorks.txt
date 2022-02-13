@@ -27,6 +27,16 @@ For each planet listed in the next section below, output this:
    planet's years.
 
 
+property, age earth years
+
+
+property, age on different planet
+
+will update them both
+
+display them
+
+
 To achieve that, do this:
 
 Define a class object constructor PlanetOrbits with the following

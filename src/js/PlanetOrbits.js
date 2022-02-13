@@ -9,12 +9,4 @@ class PlanetOrbits {
   }
 }
 
-property, age earth years
-
-
-property, age on different planet
-
-will update them both
-
-display them
 
