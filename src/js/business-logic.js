@@ -1,14 +1,5 @@
-export {PlanetOrbits};
 export {UserAgeAndLifeExpectancy};
-
-class PlanetOrbits {
-  constructor() {
-    this.mercury = 0.24;
-    this.venus = 0.62;
-    this.mars = 1.88;
-    this.jupiter = 11.86;
-  }
-}
+export {PlanetOrbits};
 
 class UserAgeAndLifeExpectancy {
   constructor(userAge, lifeExpectancy) {
@@ -16,5 +7,14 @@ class UserAgeAndLifeExpectancy {
     this.lifeExpectancy = lifeExpectancy;
     this.yearsRemaining = lifeExpectancy - userAge;
     this.yearsPastExpectancy = userAge - lifeExpectancy;
+  }
+}
+
+class PlanetOrbits {
+  constructor() {
+    this.mercury = 0.24;
+    this.venus = 0.62;
+    this.mars = 1.88;
+    this.jupiter = 11.86;
   }
 }
