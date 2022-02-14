@@ -22,5 +22,6 @@ $(document).ready(function() {
     let userAgeAndLifeExpectancy = new UserAgeAndLifeExpectancy(userAge, lifeExpectancy);
     let planetOrbits = new PlanetOrbits(planetChosen);
     clearFields();
+    let result = convertAgeInEarthYearsToAgeInOtherPlanetYears(userAge, lifeExpectancy, planetChosen);
   });
 });

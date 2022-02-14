@@ -63,17 +63,31 @@ initial properties:
 
 
 Define a function checkIfOlderThanLifeExpectancy
+  yearsRemaining = lifeExpectancy - userAge
+  yearsPastExpectancy = userAge - lifeExpectancy
+  yearsLeftOrBeyond
   If yearsRemaining === a positive number
     return yearsRemaining
+    yearsLeftOrBeyond = "years left to live"
   else
     return yearsPastExpectancy
+    yearsLeftOrBeyond = "years beyond your life expectancy"
 
 
 Define a function convertAgeInEarthYearsToAgeInOtherPlanetYears with parameters:
  - parameter: userAge
- - parameter: the return of checkIfOlderThanLifeExpectancy
+ - parameter: lifeExpectancy
  - parameter: planetChosen
+define variable yearsLeftOrBeyond to equal result of function call: \
+ checkIfOlderThanLifeExpectancy on userAge and lifeExpectancy
+define variable result:
 
+"You are ${converedAge} ${planet} years young and have ${yearsRemaining or yearsPastExpectancy} ${yearsLeftOrBeyond}.
+
+For example:
+"You are 45 Mars years young and have 55 Mars years left to live."
+Or:
+"You are 105 Mars years young and have 5 Mars years beyond your life expectancy."
 
 For document ready function:
 
