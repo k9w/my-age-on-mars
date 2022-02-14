@@ -1,10 +1,16 @@
 import {UserAgeAndLifeExpectancy} from '../src/js/business-logic.js';
 import {PlanetOrbits} from '../src/js/business-logic.js';
 
+beforeEach(() => {
+  let userAge = 35;
+  let lifeExpectancy = 100;
+  let planetChosen = "Mars";
+});
+
 describe('UserAgeAndLifeExpectancy', () => {
   
   it('This constructor should correctly create an object with properties for age, life expectancy, and years remaining.', () => {
-    let userAgeAndLifeExpectancy = new UserAgeAndLifeExpectancy(36,100)
+    let userAgeAndLifeExpectancy = new UserAgeAndLifeExpectancy(userAge,lifeExpectancy)
     expect(userAgeAndLifeExpectancy.userAge).toEqual(36);
     expect(userAgeAndLifeExpectancy.lifeExpectancy).toEqual(100);
     expect(userAgeAndLifeExpectancy.yearsRemaining = userAgeAndLifeExpectancy.lifeExpectancy - userAgeAndLifeExpectancy.userAge).toEqual(64)
@@ -20,7 +26,7 @@ describe('UserAgeAndLifeExpectancy', () => {
 });
 
 describe('PlanetOrbits', () => {
-  
+
   test('This constuctor should correctly create a PlanetOrbits object with orbital periods for each planet relative to Earth years.', () => {
     let planetOrbits = new PlanetOrbits();
     expect(planetOrbits.mercury).toEqual(0.24);
@@ -40,8 +46,6 @@ describe('PlanetOrbits', () => {
 describe ('checkIfOlderThanLifeExpectancy', () => {
   
   it('This function should check if the user is older than their life expectancy.', () => {
-    let userAge = 35;
-    let lifeExpectancy = 100;
     function checkIfOlderThanLifeExpectancy(userAge, lifeExpectancy) {
       let yearsRemaining = lifeExpectancy - userAge;
       let yearsPastExpectancy = userAge - lifeExpectancy;
@@ -58,5 +62,14 @@ describe ('checkIfOlderThanLifeExpectancy', () => {
 
 });
 
+/*
+describe ('convertAgeAndExpectancyToPlanetChosen', () +> {
 
-
+  test('Convert the age and expectancy given from Earth years to the years of the planet chosen.', () => {
+    function convertAgeAndExpectancyToPlanetChosen(userAge, lifeExpectancy, planetChosen) {
+      let yearsLeftOrBeyond = checkIfOlderThanLifeExpectancy(userAge, lifeExpectancy)
+      g
+    }
+  });
+});
+*/

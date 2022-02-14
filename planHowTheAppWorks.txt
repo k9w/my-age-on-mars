@@ -62,7 +62,7 @@ initial properties:
  - yearsPastExpectancy = userAge - lifeExpectancy
 
 
-Define a function checkIfOlderThanLifeExpectancy
+function checkIfOlderThanLifeExpectancy(userAge,lifeExpectancy)
   yearsRemaining = lifeExpectancy - userAge
   yearsPastExpectancy = userAge - lifeExpectancy
   yearsLeftOrBeyond
@@ -73,16 +73,14 @@ Define a function checkIfOlderThanLifeExpectancy
     return yearsPastExpectancy
     yearsLeftOrBeyond = "years beyond your life expectancy"
 
+function convertAgeAndExpectancyToPlanetChosen(userAge, yearsLeftOrBeyond)
+  variable convertedAge = userAge * planetOrbits.planetChosen
+  variable convertedExpectancy = lifeExpectancy * planetOrbits.planetChosen
 
-Define a function convertAgeInEarthYearsToAgeInOtherPlanetYears with parameters:
- - parameter: userAge
- - parameter: lifeExpectancy
- - parameter: planetChosen
-define variable yearsLeftOrBeyond to equal result of function call: \
- checkIfOlderThanLifeExpectancy on userAge and lifeExpectancy
-define variable result:
-
-"You are ${converedAge} ${planet} years young and have ${yearsRemaining or yearsPastExpectancy} ${yearsLeftOrBeyond}.
+function showAgeAndExpectancyInYearsOfPlanetChosen(userAge,lifeExpectancy,planetChosen)
+  variable yearsLeftOrBeyond = checkIfOlderThanLifeExpectancy(userAge,lifeExpectancy)
+  convertAgeAndExpectancyToPlanetChosen(userAge, yearsLeftOrBeyond)
+  variable result = "You are ${converedAge} ${planetChosen} years young and have ${convertedExpectancy} ${yearsLeftOrBeyond}.
 
 For example:
 "You are 45 Mars years young and have 55 Mars years left to live."
