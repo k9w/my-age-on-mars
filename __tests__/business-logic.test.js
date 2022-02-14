@@ -1,13 +1,7 @@
 
-import {PlanetOrbits} from '../src/js/PlanetOrbits.js';
+import {PlanetOrbits} from '../src/js/business-logic.js';
 
 describe('PlanetOrbits', () => {
-
-  /*
-  beforeEach('', () => {
-    x = new Object1(parameter, or 'argument');
-  });
-  */
   
   test('This constuctor should correctly create a PlanetOrbits object with orbital periods for each planet relative to Earth years.', () => {
     let planetOrbits = new PlanetOrbits();
@@ -18,27 +12,26 @@ describe('PlanetOrbits', () => {
   });
 
   /*
-  it('should correctly *do something esle*', () => {
+  it('should correctly *do something else*', () => {
     
   });
   */
   
 });
 
-/*
-describe('', () => {
-
-  beforeEach('', () => {
-    x = new Object2(parameter, or 'argument');
-  });
+describe('UserAgeAndLifeExpectancy', () => {
   
   it('should correctly *do something*', () => {
-    
+    let userAgeAndLifeExpectancy = new UserAgeAndLifeExpectancy(36,100)
+    expect(userAge).toEqual(36);
+    expect(lifeExpectancy).toEqual(100);
+    expect(yearsRemaining = lifeExpectancy - userAge).toEqual(64)
   });
 
-  test('should correctly *do something esle*', () => {
+  /*
+  test('should correctly *do something else*', () => {
     
   });
+  */
   
 });
-*/
