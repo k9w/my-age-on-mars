@@ -27,6 +27,7 @@ describe('UserAgeAndLifeExpectancy', () => {
     expect(userAgeAndLifeExpectancy.userAge).toEqual(36);
     expect(userAgeAndLifeExpectancy.lifeExpectancy).toEqual(100);
     expect(userAgeAndLifeExpectancy.yearsRemaining = userAgeAndLifeExpectancy.lifeExpectancy - userAgeAndLifeExpectancy.userAge).toEqual(64)
+    expect(userAgeAndLifeExpectancy.yearsPastExpectancy = userAgeAndLifeExpectancy.userAge - userAgeAndLifeExpectancy.lifeExpectancy).toEqual(-64)
   });
 
   /*

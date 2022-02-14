@@ -53,9 +53,15 @@ Jupiter	       11.86
 Define a class object constructor UserAgeAndLifeExpectancy with
 initial properties:
 
- - userAgeInput
+ - userAge
 
- - userLifeExpectancyInput
+ - lifeExpectancy
+
+ - yearsRemaining = lifeExpectancy - userAge
+
+
+Define a function checkIfEndOfLife
+  If userAge is greater than lifeExpectancy
 
 Additional properties can be added from methods defined below.
 
