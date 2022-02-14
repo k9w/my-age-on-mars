@@ -12,6 +12,19 @@ function clearFields() {
   $('#result').html("");
 }
 
+function checkIfOlderThanLifeExpectancy(userAge, lifeExpectancy) {
+  let yearsRemaining = lifeExpectancy - userAge;
+  let yearsPastExpectancy = userAge - lifeExpectancy;
+  let yearsLeftOrBeyond
+  if (yearsRemaining > yearsPastExpectancy) {
+    yearsLeftOrBeyond = "years left to live"
+    return yearsRemaining
+  } else {
+    yearsLeftOrBeyond = "years beyond your life expectancy"
+    return yearsPastExpectancy
+  }
+}
+
 
 
 $(document).ready(function() {
