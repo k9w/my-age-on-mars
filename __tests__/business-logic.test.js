@@ -11,10 +11,10 @@ describe('UserAgeAndLifeExpectancy', () => {
   
   it('This constructor should correctly create an object with properties for age, life expectancy, and years remaining.', () => {
     let userAgeAndLifeExpectancy = new UserAgeAndLifeExpectancy(userAge,lifeExpectancy)
-    expect(userAgeAndLifeExpectancy.userAge).toEqual(36);
+    expect(userAgeAndLifeExpectancy.userAge).toEqual(35);
     expect(userAgeAndLifeExpectancy.lifeExpectancy).toEqual(100);
-    expect(userAgeAndLifeExpectancy.yearsRemaining = userAgeAndLifeExpectancy.lifeExpectancy - userAgeAndLifeExpectancy.userAge).toEqual(64)
-    expect(userAgeAndLifeExpectancy.yearsPastExpectancy = userAgeAndLifeExpectancy.userAge - userAgeAndLifeExpectancy.lifeExpectancy).toEqual(-64)
+    expect(userAgeAndLifeExpectancy.yearsRemaining = userAgeAndLifeExpectancy.lifeExpectancy - userAgeAndLifeExpectancy.userAge).toEqual(65)
+    expect(userAgeAndLifeExpectancy.yearsPastExpectancy = userAgeAndLifeExpectancy.userAge - userAgeAndLifeExpectancy.lifeExpectancy).toEqual(-65)
   });
 
   /*

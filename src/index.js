@@ -2,8 +2,7 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import UserAgeAndLifeExpectancy from './js/business-logic.js';
-import PlanetOrbits from './js/business-logic.js';
+import { UserAgeAndLifeExpectancy, PlanetOrbits } from './js/business-logic.js';
 
 function clearFields() {
   $('#age-field').val("");
@@ -15,13 +14,13 @@ function clearFields() {
 function checkIfOlderThanLifeExpectancy(userAge, lifeExpectancy) {
   let yearsRemaining = lifeExpectancy - userAge;
   let yearsPastExpectancy = userAge - lifeExpectancy;
-  let yearsLeftOrBeyond
+  let yearsLeftOrBeyond;
   if (yearsRemaining > yearsPastExpectancy) {
-    yearsLeftOrBeyond = "years left to live"
-    return yearsRemaining
+    yearsLeftOrBeyond = "years left to live";
+    return yearsRemaining;
   } else {
-    yearsLeftOrBeyond = "years beyond your life expectancy"
-    return yearsPastExpectancy
+    yearsLeftOrBeyond = "years beyond your life expectancy";
+    return yearsPastExpectancy;
   }
 }
 
