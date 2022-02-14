@@ -1,5 +1,6 @@
 
 import {PlanetOrbits} from '../src/js/business-logic.js';
+import {UserAgeAndLifeExpectancy} from '../src/js/business-logic.js';
 
 describe('PlanetOrbits', () => {
   
@@ -21,11 +22,11 @@ describe('PlanetOrbits', () => {
 
 describe('UserAgeAndLifeExpectancy', () => {
   
-  it('should correctly *do something*', () => {
+  it('should correctly create n object with properties for age, life expectancy, and years remaining.', () => {
     let userAgeAndLifeExpectancy = new UserAgeAndLifeExpectancy(36,100)
-    expect(userAge).toEqual(36);
-    expect(lifeExpectancy).toEqual(100);
-    expect(yearsRemaining = lifeExpectancy - userAge).toEqual(64)
+    expect(userAgeAndLifeExpectancy.userAge).toEqual(36);
+    expect(userAgeAndLifeExpectancy.lifeExpectancy).toEqual(100);
+    expect(userAgeAndLifeExpectancy.yearsRemaining = userAgeAndLifeExpectancy.lifeExpectancy - userAgeAndLifeExpectancy.userAge).toEqual(64)
   });
 
   /*

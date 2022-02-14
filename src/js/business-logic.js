@@ -1,4 +1,5 @@
 export {PlanetOrbits};
+export {UserAgeAndLifeExpectancy};
 
 class PlanetOrbits {
   constructor() {
@@ -9,4 +10,10 @@ class PlanetOrbits {
   }
 }
 
-
+class UserAgeAndLifeExpectancy {
+  constructor(userAge, lifeExpectancy) {
+    this.userAge = userAge;
+    this.lifeExpectancy = lifeExpectancy;
+    this.yearsRemaining = lifeExpectancy = userAge;
+  }
+}
