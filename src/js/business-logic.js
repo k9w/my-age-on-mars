@@ -14,6 +14,6 @@ class UserAgeAndLifeExpectancy {
   constructor(userAge, lifeExpectancy) {
     this.userAge = userAge;
     this.lifeExpectancy = lifeExpectancy;
-    this.yearsRemaining = lifeExpectancy = userAge;
+    this.yearsRemaining = lifeExpectancy - userAge;
   }
 }
