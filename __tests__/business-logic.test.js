@@ -22,7 +22,7 @@ describe('PlanetOrbits', () => {
 
 describe('UserAgeAndLifeExpectancy', () => {
   
-  it('should correctly create n object with properties for age, life expectancy, and years remaining.', () => {
+  it('This constructor should correctly create an object with properties for age, life expectancy, and years remaining.', () => {
     let userAgeAndLifeExpectancy = new UserAgeAndLifeExpectancy(36,100)
     expect(userAgeAndLifeExpectancy.userAge).toEqual(36);
     expect(userAgeAndLifeExpectancy.lifeExpectancy).toEqual(100);
