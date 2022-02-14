@@ -36,3 +36,27 @@ describe('PlanetOrbits', () => {
   */
   
 });
+
+describe ('checkIfOlderThanLifeExpectancy', () => {
+  
+  it('This function should check if the user is older than their life expectancy.', () => {
+    let userAge = 35;
+    let lifeExpectancy = 100;
+    function checkIfOlderThanLifeExpectancy(userAge, lifeExpectancy) {
+      let yearsRemaining = lifeExpectancy - userAge;
+      let yearsPastExpectancy = userAge - lifeExpectancy;
+      let yearsLeftOrBeyond
+      if (yearsRemaining > yearsPastExpectancy) {
+        yearsLeftOrBeyond = "years left to live"
+        return yearsRemaining
+      } else {
+        yearsLeftOrBeyond = "years beyond your life expectancy"
+        return yearsPastExpectancy
+      }
+    }
+  });
+
+});
+
+
+
