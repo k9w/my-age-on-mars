@@ -1,19 +1,55 @@
 This plaintext document outlines my thought process while designing
 this application.
 
+
+Expected input:
+
+ - userAge
+
+ - lifeExpectancy
+
+ - planetChosen
+
+
+Expected output:
+
+For the chosen planet's years, show:
+
+ - convertedAge
+
+ - yearsRemaining or yearsPastExpectancy
+
+
+
+Start with a class object UserAgeAndLifeExpectancy with the following
+properties.
+
+ - Returns userAge in years of one of 4 planets. Fetch the conversions
+   from another object PlanetOrbits.
+
+ - Return how many of that planet's years the user has left to live,
+   or how many of that planet's years the user has lived past the life
+   expectancy on that planet. The number should be positive.
+
+
+The four planets' year lengths relative to Earth's are stored as
+constants in another object: PlanetOrbits.
+
+Planet 	       Planet's year in Earth years
+
+Mercury	        0.24
+Venus	        0.62
+Mars	        1.88
+Jupiter	       11.86
+
+
+
+
+
 Solar-year = 365 Earth-days
 
 Let's not consider leap years. In fact we'll only work with units of
 years, not days.
-
-
-Expected input:
-
- - User's age
-
- - User's life expectancy
-
- - User does not pick a planet
 
 
 For each planet listed in the next section below, output this:
