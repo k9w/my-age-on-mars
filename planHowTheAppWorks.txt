@@ -21,202 +21,65 @@ For the chosen planet's years, show:
 
 
 
-Start with a class object UserAgeAndLifeExpectancy with the following
-properties.
+Define a class object AgeCalculator with the following properties.
 
- - Returns userAge in years of one of 4 planets. Fetch the conversions
-   from another object PlanetOrbits.
+ - Convert userAge in Earth years to number of the chosen planet's
+   years.
 
- - Return how many of that planet's years the user has left to live,
-   or how many of that planet's years the user has lived past the life
-   expectancy on that planet. The number should be positive.
+ - Show in that planet's years how many years the user has left to
+   live or has lived past their life expectancy. The number of years
+   should be positive.
 
 
-The four planets' year lengths relative to Earth's are stored as
-constants in another object: PlanetOrbits.
+Here's how it would look:
 
-Planet 	       Planet's year in Earth years
+function AgeCalculator(userAge, lifeExpectancy, planetChosen);
 
-Mercury	        0.24
-Venus	        0.62
-Mars	        1.88
-Jupiter	       11.86
+AgeCalculator.prototype methods:
 
+convert the two functions below into prototype methods of class
+AgeCalculator once they are tested working.
 
+let userAge = 35;
+let lifeExpectancy = 100;
+let planetChosen = 'mercury';
 
+function convertYears(planetChosen) {
+  let yearConversion
+  switch (planetChosen) {
+    case ("mercury"):
+      yearConversion = 0.24;
+      break;
+    case ("venus"):
+     yearConversion = 0.62;
+      break;
+    case ("mars"):
+      yearConversion = 1.88;
+      break;
+    case ("jupiter"):
+      yearConversion = 11.86;
+      break;
+    default:
+      alert("No planet chosen.");
+    }
+    // console.log("year conversion is " + yearConversion);
+}
 
 
-Solar-year = 365 Earth-days
+// console.log(convertYears(planetChosen));  -- says 'undefined' in console
 
-Let's not consider leap years. In fact we'll only work with units of
-years, not days.
+function yearsRemainingOrPastExpectancy(userAge, lifeExpectancy, planetChosen) {
+  let yearsLeftOrPast = (lifeExpectancy - userAge)
+  let convertedYearsLeftOrPast = yearsLeftOrPast * convertYears(planetChosen);
+  console.log(yearsLeftOrPast);
+}
 
+yearsRemainingOrPastExpectancy(userAge, lifeExpectancy, planetChosen);
 
-For each planet listed in the next section below, output this:
 
- - The user's age in that planet's years.
 
- - The user's years remaining to live, based on that planet's
-   years. OR
 
- - The user's years lived past their life expectancy, based on that
-   planet's years.
+Once the above code is working, plan out what part of it to test for
+and write in the project first and in what order for one test to pass
+at a time.
 
-
-property, age earth years
-
-
-property, age on different planet
-
-will update them both
-
-display them
-
-
-To achieve that, do this:
-
-Define a class object constructor PlanetOrbits with the following
-properties and values as constants.
-
-Planet 	       Planet's year in Earth years
-
-Mercury	        0.24
-Venus	        0.62
-Mars	        1.88
-Jupiter	       11.86
-
-
-Define a class object constructor UserAgeAndLifeExpectancy with
-initial properties:
-
- - userAge
-
- - lifeExpectancy
-
- - yearsRemaining = lifeExpectancy - userAge
-
- - yearsPastExpectancy = userAge - lifeExpectancy
-
-
-function checkIfOlderThanLifeExpectancy(userAge,lifeExpectancy)
-  yearsRemaining = lifeExpectancy - userAge
-  yearsPastExpectancy = userAge - lifeExpectancy
-  yearsLeftOrBeyond
-  If yearsRemaining === a positive number
-    return yearsRemaining
-    yearsLeftOrBeyond = "years left to live"
-  else
-    return yearsPastExpectancy
-    yearsLeftOrBeyond = "years beyond your life expectancy"
-
-function convertAgeAndExpectancyToPlanetChosen(userAge, yearsLeftOrBeyond)
-  variable convertedAge = userAge * planetOrbits.planetChosen
-  variable convertedExpectancy = lifeExpectancy * planetOrbits.planetChosen
-
-function showAgeAndExpectancyInYearsOfPlanetChosen(userAge,lifeExpectancy,planetChosen)
-  variable yearsLeftOrBeyond = checkIfOlderThanLifeExpectancy(userAge,lifeExpectancy)
-  convertAgeAndExpectancyToPlanetChosen(userAge, yearsLeftOrBeyond)
-  variable result = "You are ${converedAge} ${planetChosen} years young and have ${convertedExpectancy} ${yearsLeftOrBeyond}.
-
-For example:
-"You are 45 Mars years young and have 55 Mars years left to live."
-Or:
-"You are 105 Mars years young and have 5 Mars years beyond your life expectancy."
-
-For document ready function:
-
-When the form submit button is clicked, do the following:
-
-Instantiate a class object planetOrbits from its constructor.
-Instantiate a class object userAgeAndLifeExpectancy from its
-constructor.
-
-Declare a variable planetChosen and set it equal to the input of planet-chosen
-
-
-[older planning is below]
-
-
-Define a method convertEarthYearsToOtherPlanetYears to loop through
-each of these inputs:
-
- - userAgeInput
-
- - userLifeExpectancyInput
-
- - userEarthYearsRemainingToLive OR
-
- - earthYearsLivedPastTheLifeExpectancy
-
-For each planet, multiply or divide the number value by the constant
-stored for that planet property in object planetOrbits.
-
-
-For example, here is how it would look with
- userEarthYearsRemainingToLive:
-
-Mercury:
-
- - ageInMercuryYears
-
- - mercuryYearsRemainingToLive
-
-
-Venus:
-
- - ageInVenusYears
-
- - venusYearsRemainingToLive
-
-
-Mars:
-
- - ageInMarsYears
-
- - marsYearsRemainingToLive
-
-
-Jupiter:
-
- - ageInJupiterYears
-
- - jupiterYearsRemainingToLive
-
-
-As a second example, here is how it would look with
-earthYearsLivedPastTheLifeExpectancy:
-
-
-Mercury:
-
- - ageInMercuryYears
-
- - mercuryYearsLivedPastTheLifeExpectancy
-
-
-Venus:
-
- - ageInVenusYears
-
- - venusYearsLivedPastTheLifeExpectancy
-
-
-Mars:
-
- - ageInMarsYears
-
- - marsYearsLivedPastTheLifeExpectancy
-
-
-Jupiter:
-
- - ageInJupiterYears
-
- - jupiterYearsLivedPastTheLifeExpectancy
-
-
-As the loop progresses, add each variable and value as a new property
-to the object userAgeAndLifeExpectancy.
-
-
-Display the results to the user.
