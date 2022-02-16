@@ -51,7 +51,7 @@ function convertYears(planetChosen) {
       yearConversion = 0.24;
       break;
     case ("venus"):
-     yearConversion = 0.62;
+      yearConversion = 0.62;
       break;
     case ("mars"):
       yearConversion = 1.88;
