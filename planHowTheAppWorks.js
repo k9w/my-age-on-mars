@@ -10,15 +10,15 @@ Interface, since the independent project assignment did not requie it.
 
 Once the code works well enough, I plan to re-implement it using
 TDD. I will sequence out what parts of the code to write a good fail
-test, then insert the code, then pass the test, then move on to the
-next test, etc.
+test for, then insert the code, then pass the test, then move on to
+the next test, etc.
 
 I am open to learning better strategies to whiteboard the application
 and know what to test for and write in what sequence, so that I don't
 have to pre-write the code like this in the future.
 
 At the moment, the code in this file has hard-coded input values and
-partially works. You can run it on the command line with node:
+partially works. You can run it on the command line with NodeJS:
 
 $ node planHowTheAppWorks.js
 
