@@ -29,17 +29,23 @@ Expected input:
 
  - lifeExpectancy
 
- - planetChosen
-
-
 Expected output:
 
-For the chosen planet's years, show:
+ - user age in Mercury years
 
- - convertedAge
+ - user age in Venus years
 
- - yearsRemaining or yearsPastExpectancy
+ - user age in Mars years
 
+ - user age in Jupiter years
+
+ - Mercury years 1) left to live or 2) past life expectancy
+
+ - Venus years 1) left to live or 2) past life expectancy
+
+ - Mars years 1) left to live or 2) past life expectancy
+
+ - Juptier years 1) left to live or 2) past life expectancy
 
 
 Define a class object AgeCalculator with the following properties.
@@ -61,14 +67,55 @@ AgeCalculator.prototype methods:
 convert the code below into prototype methods of class AgeCalculator
 as applicable once it is tested working.
 
+Find the years remaining to live or the years lived past the life 
+expectancy in Earth years and planetChosen years.
+
+earthYearsLeftOrOver = (lifeExpectancy - userAge)
+if yearsLeftOrOver is positive, make a sentence saying how many Earth years the user has left to live.
+if YearsLeftOrOver is negative, set it to the absolute value of its value (-1 becomes 1) and make a sentence saying how many Earth years the person has lived past their life expectancy.
+
+
+planetChosenYearsLeftOrOver  = (lifeExpectancy - userAge) * convertedYears
+
 */
 
+export default class AgeCalculator {
+  constructor(userAge, lifeExpectancy) {
+    this.(userAge)forEachPlanet;
+    this.(yearsLeftOrOver)forEachPlanet;
+  }
 
+  forEachPlanet() {
+    forEach() {
+      Mercury
+      Venus
+      Mars
+      Jupiter
+    }
+  }
+
+  yearsRemainingOrOver (userAge, lifeExpectancy) {
+
+  }
+}
 
 function calculateLifeExpectancy(userAge, lifeExpectancy) {
-  let yearsLeftOrOver = (lifeExpectancy - userAge)
+  let earthYearsLeftOrOver = (lifeExpectancy - userAge);
   return yearsLeftOrOver;
   // This could be a negative number. We'll deal with that below.
+}
+
+function reportLifeExpectancy(yearsLeftOrOver) {
+  let yearsLeftOrOver = calculateLifeExpectancy(userAge, lifeExpectancy);
+  let lifeExpectancyResult;
+  if (Math.sign(yearsLeftOrOver) === -1) {
+    yearsLeftOrOver = Math.abs(yearsLeftOrOver);
+    lifeExpectancyResult = `You have lived ${yearsLeftOrOver} Earth years past your life expectancy.`
+  } else {
+    lifeExpectancyResult = `You have ${yearsLeftOrOver} Earth years left to live.`
+  }
+  return lifeExpectancyResult;
+  
 }
 
 function convertYears(planetChosen) {
@@ -128,9 +175,6 @@ convertLifeExpectancy();
 
 // Show life expectancy in Earth years.
 function showLifeExpectancy(yearsLeftOrOver) {
-  if (Math.sign(yearsLeft) === -1) {
-    yearsLeftOrOver = Math.abs(yearsLeftOrOver);
-  }
   
 }
 

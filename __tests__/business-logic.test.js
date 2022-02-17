@@ -1,14 +1,16 @@
 import {UserAgeAndLifeExpectancy} from '../src/js/business-logic.js';
 import {PlanetOrbits} from '../src/js/business-logic.js';
 
-beforeEach(() => {
-  let userAge = 35;
-  let lifeExpectancy = 100;
-  let planetChosen = "Mars";
-});
 
 describe('UserAgeAndLifeExpectancy', () => {
+
+  beforeEach(() => {
+    let userAge = 35;
+    let lifeExpectancy = 100;
+    let planetChosen = "Mars";
+  });
   
+
   it('This constructor should correctly create an object with properties for age, life expectancy, and years remaining.', () => {
     let userAgeAndLifeExpectancy = new UserAgeAndLifeExpectancy(userAge,lifeExpectancy)
     expect(userAgeAndLifeExpectancy.userAge).toEqual(35);
