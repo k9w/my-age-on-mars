@@ -85,7 +85,7 @@ export default class AgeCalculator {
     this.(yearsLeftOrOver)forEachPlanet;
   }
 
-  forEachPlanet() {
+  convertToEachPlanetYears() {
     forEach() {
       Mercury
       Venus
@@ -94,8 +94,8 @@ export default class AgeCalculator {
     }
   }
 
-  yearsRemainingOrOver (userAge, lifeExpectancy) {
-
+  calculateYearsLeftOrOver (userAge, lifeExpectancy) {
+    calculate
   }
 }
 
