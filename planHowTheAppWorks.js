@@ -81,23 +81,68 @@ planetChosenYearsLeftOrOver  = (lifeExpectancy - userAge) * convertedYears
 
 export default class AgeCalculator {
   constructor(userAge, lifeExpectancy) {
-    this.(userAge)forEachPlanet;
-    this.(yearsLeftOrOver)forEachPlanet;
+    this.userAge = userAge;
+    this.lifeExpectancy = lifeExpectancy;
+  }
+  
+  convertUserAgeToEachPlanetYears(userAge) {
+    let ageInEachPlanetYears = [];
+    ageInEachPlanetYears[0] = Math.round(userAge / 0.24);
+    ageInEachPlanetYears[1] = Math.round(userAge / 0.62);
+    ageInEachPlanetYears[2] = Math.round(userAge / 1.88);
+    ageInEachPlanetYears[3] = Math.round(userAge / 11.86);
+    return ageInEachPlanetYears;
   }
 
-  convertToEachPlanetYears() {
-    forEach() {
-      Mercury
-      Venus
-      Mars
-      Jupiter
-    }
+  convertLifeExpectancyToEachPlanetYears(lifeExpectancy) {
+    let lifeExpectancyInEachPlanetYears = [];
+    lifeExpectancyInEachPlanetYears[0] = Math.round(userAge / 0.24);
+    lifeExpectancyInEachPlanetYears[0] = Math.round(userAge / 0.62);
+    lifeExpectancyInEachPlanetYears[0] = Math.round(userAge / 1.88);
+    lifeExpectancyInEachPlanetYears[0] = Math.round(userAge / 11.86);
+    return lifeExpectancyInEachPlanetYears;
   }
 
+    
   calculateYearsLeftOrOver (userAge, lifeExpectancy) {
     calculate
   }
 }
+
+
+// Move some of the functions below into the class object above as methods.
+
+let userAge = 35;
+let lifeExpectancy = 100;
+
+function convertUserAgeToEachPlanetYears(userAge) {
+  let ageInEachPlanetYears = [];
+  ageInEachPlanetYears[0] = Math.round(userAge / 0.24);
+  ageInEachPlanetYears[1] = Math.round(userAge / 0.62);
+  ageInEachPlanetYears[2] = Math.round(userAge / 1.88);
+  ageInEachPlanetYears[3] = Math.round(userAge / 11.86);
+  return ageInEachPlanetYears;
+}
+
+function convertLifeExpectancyToEachPlanetYears(lifeExpectancy) {
+  let expectancyInEachPlanetYears = [];
+  expectancyInEachPlanetYears[0] = Math.round(lifeExpectancy / 0.24);
+  expectancyInEachPlanetYears[1] = Math.round(lifeExpectancy / 0.62);
+  expectancyInEachPlanetYears[2] = Math.round(lifeExpectancy / 1.88);
+  expectancyInEachPlanetYears[3] = Math.round(lifeExpectancy / 11.86);
+  return expectancyInEachPlanetYears;
+}
+
+console.log("Age: " + convertUserAgeToEachPlanetYears(userAge));
+
+console.log("Expectancy " + convertLifeExpectancyToEachPlanetYears(lifeExpectancy));
+
+
+function findYearsLeftOrOverExpectancy(userAge, lifeExpectancy) {
+  // 02-18 - continue working here
+}
+
+
 
 function calculateLifeExpectancy(userAge, lifeExpectancy) {
   let earthYearsLeftOrOver = (lifeExpectancy - userAge);
@@ -167,7 +212,7 @@ convertAge(userAge, planetChosen);
 
 
 
-// 02-16 - continue working here
+
 
 
 
