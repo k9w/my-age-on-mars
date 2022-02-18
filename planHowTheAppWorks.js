@@ -53,14 +53,14 @@ Here's how it would look:
 
 User inputs age and life expectancy.
 
-Calculate years left or over.
+Calculate years left or over expectancy.
 
 Convert age into each planet's years.
 
 Convert years left or over into each planet's years.
 
-For each of those four planets, display the user's age and years left
-or over (8 results total).
+Display the user's age and years left or over in each planet's years
+(8 results total).
 
 
 export default class AgeCalculator {
@@ -105,6 +105,10 @@ function findYearsOverInEachPlanetYears(lifeExpectancy) {
   yearsOverInEachPlanetYears[3] = Math.round(lifeExpectancy / 11.86);
   return yearsLeftInEachPlanetYears;
 }
+
+findAgeInEachPlanetYears(userAge);
+findYearsLeftInEachPlanetYears(lifeExpectancy);
+findYearsOverInEachPlanetYears(lifeExpectancy);
 
 console.log("Age: " + convertUserAgeToEachPlanetYears(userAge));
 console.log("Expectancy " + convertLifeExpectancyToEachPlanetYears(lifeExpectancy));
