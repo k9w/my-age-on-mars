@@ -62,7 +62,6 @@ Convert years left or over into each planet's years.
 For each of those four planets, display the user's age and years left
 or over (8 results total).
 
-*/
 
 export default class AgeCalculator {
   constructor(userAge, lifeExpectancy) {
@@ -71,9 +70,9 @@ export default class AgeCalculator {
   }
   
 }
-
-
 // Move some of the functions below into the class object above as methods.
+
+*/
 
 let userAge = 35;
 let lifeExpectancy = 100;
@@ -91,7 +90,7 @@ function findAgeInEachPlanetYears(userAge) {
   return ageInEachPlanetYears;
 }
 
-function findYearsLeftEachPlanetYears(lifeExpectancy) {
+function findYearsLeftInEachPlanetYears(lifeExpectancy) {
   yearsLeftInEachPlanetYears[0] = Math.round(lifeExpectancy / 0.24);
   yearsLeftInEachPlanetYears[1] = Math.round(lifeExpectancy / 0.62);
   yearsLeftInEachPlanetYears[2] = Math.round(lifeExpectancy / 1.88);
@@ -99,7 +98,7 @@ function findYearsLeftEachPlanetYears(lifeExpectancy) {
   return yearsLeftInEachPlanetYears;
 }
 
-function findYearsOverEachPlanetYears(lifeExpectancy) {
+function findYearsOverInEachPlanetYears(lifeExpectancy) {
   yearsOverInEachPlanetYears[0] = Math.round(lifeExpectancy / 0.24);
   yearsOverInEachPlanetYears[1] = Math.round(lifeExpectancy / 0.62);
   yearsOverInEachPlanetYears[2] = Math.round(lifeExpectancy / 1.88);
@@ -108,13 +107,9 @@ function findYearsOverEachPlanetYears(lifeExpectancy) {
 }
 
 console.log("Age: " + convertUserAgeToEachPlanetYears(userAge));
-
 console.log("Expectancy " + convertLifeExpectancyToEachPlanetYears(lifeExpectancy));
 
-
-
-
-function findYearsLeft(userAge, lifeExpectancy) {
+function chooseYearsLeftOrOver(earthYearsLeft, earthYearsOver) {
   if (Math.sign(earthYearsLeft) === -1) && earthYearsOver === Math.abs(earthYearsLeft) {
     earthLifeExpectancyResult = `You have lived ${earthYearsOver} Earth years past your life expectancy.`
   } else {
@@ -122,96 +117,3 @@ function findYearsLeft(userAge, lifeExpectancy) {
   }
   return lifeExpectancyResult;
 }
-
-
-
-
-function reportLifeExpectancy(yearsLeftOrOver) {
-  let yearsLeftOrOver = calculateLifeExpectancy(userAge, lifeExpectancy);
-  let lifeExpectancyResult;
-  if (Math.sign(yearsLeftOrOver) === -1) {
-    yearsLeftOrOver = Math.abs(yearsLeftOrOver);
-    lifeExpectancyResult = `You have lived ${yearsLeftOrOver} Earth years past your life expectancy.`
-  } else {
-    lifeExpectancyResult = `You have ${yearsLeftOrOver} Earth years left to live.`
-  }
-  return lifeExpectancyResult;
-  
-}
-
-function convertYears(planetChosen) {
-  let yearConversion;
-  switch (planetChosen) {
-    case ("Mercury"):
-      yearConversion = 0.24;
-      break;
-    case ("Venus"):
-      yearConversion = 0.62;
-      break;
-    case ("Mars"):
-      yearConversion = 1.88;
-      break;
-    case ("Jupiter"):
-      yearConversion = 11.86;
-      break;
-    default:
-      alert("No planet chosen.");
-    }
-  return yearConversion;
-}
-
-function convertAge(userAge, planetChosen) {
-  let convertedAge = Math.floor(userAge / convertYears(planetChosen));
-  return convertedAge;
-}
-
-function convertLifeExpectancy() {
-  let convertedLifeExpectancy = (calculateLifeExpectancy(userAge, lifeExpectancy) / convertYears(planetChosen));
-  return convertedLifeExpectancy;
-  // This could be a negative number. We'll deal with that below.
-}
-
-/* Bug:
-
-The value for planetChosen must be capitalized in order to be
-capitalized in the output displayed to the user. This only matters if
-the planet name is typed in, not for multiple choice radio buttons or
-a dropdown menu.
-
-*/
-
-let userAge = 35;
-let lifeExpectancy = 100;
-let planetChosen = 'Mars';
-
-convertAge(userAge, planetChosen);
-
-
-
-
-
-
-
-convertLifeExpectancy();
-
-// Show life expectancy in Earth years.
-function showLifeExpectancy(yearsLeftOrOver) {
-  
-}
-
-console.log("You have " + calculateLifeExpectancy(userAge, lifeExpectancy) + " Earth years left to live.");
-
-// Show user's age in planetChosen's years.
-console.log("Your age in " + planetChosen + " years is " + Math.floor(userAge / convertYears(planetChosen)) + '.');
-
-
-
-
-
-/*
-
-Once the above code is working, plan out what part of it to test for
-and write in the project first and in what order for one test to pass
-at a time.
-
-*/
