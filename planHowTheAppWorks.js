@@ -48,34 +48,19 @@ Expected output:
  - Juptier years 1) left to live or 2) past life expectancy
 
 
-Define a class object AgeCalculator with the following properties.
-
- - Convert userAge in Earth years to number of the chosen planet's
-   years.
-
- - Show in that planet's years how many years the user has left to
-   live or has lived past their life expectancy. The number of years
-   should be positive.
-
-
 Here's how it would look:
 
-function AgeCalculator(userAge, lifeExpectancy, planetChosen);
 
-AgeCalculator.prototype methods:
+User inputs age and life expectancy.
 
-convert the code below into prototype methods of class AgeCalculator
-as applicable once it is tested working.
+Calculate years left or over.
 
-Find the years remaining to live or the years lived past the life 
-expectancy in Earth years and planetChosen years.
+Convert age into each planet's years.
 
-earthYearsLeftOrOver = (lifeExpectancy - userAge)
-if yearsLeftOrOver is positive, make a sentence saying how many Earth years the user has left to live.
-if YearsLeftOrOver is negative, set it to the absolute value of its value (-1 becomes 1) and make a sentence saying how many Earth years the person has lived past their life expectancy.
+Convert years left or over into each planet's years.
 
-
-planetChosenYearsLeftOrOver  = (lifeExpectancy - userAge) * convertedYears
+For each of those four planets, display the user's age and years left
+or over (8 results total).
 
 */
 
@@ -85,28 +70,6 @@ export default class AgeCalculator {
     this.lifeExpectancy = lifeExpectancy;
   }
   
-  convertUserAgeToEachPlanetYears(userAge) {
-    let ageInEachPlanetYears = [];
-    ageInEachPlanetYears[0] = Math.round(userAge / 0.24);
-    ageInEachPlanetYears[1] = Math.round(userAge / 0.62);
-    ageInEachPlanetYears[2] = Math.round(userAge / 1.88);
-    ageInEachPlanetYears[3] = Math.round(userAge / 11.86);
-    return ageInEachPlanetYears;
-  }
-
-  convertLifeExpectancyToEachPlanetYears(lifeExpectancy) {
-    let lifeExpectancyInEachPlanetYears = [];
-    lifeExpectancyInEachPlanetYears[0] = Math.round(userAge / 0.24);
-    lifeExpectancyInEachPlanetYears[0] = Math.round(userAge / 0.62);
-    lifeExpectancyInEachPlanetYears[0] = Math.round(userAge / 1.88);
-    lifeExpectancyInEachPlanetYears[0] = Math.round(userAge / 11.86);
-    return lifeExpectancyInEachPlanetYears;
-  }
-
-    
-  calculateYearsLeftOrOver (userAge, lifeExpectancy) {
-    calculate
-  }
 }
 
 
@@ -114,9 +77,13 @@ export default class AgeCalculator {
 
 let userAge = 35;
 let lifeExpectancy = 100;
+let earthYearsLeft = (lifeExpectancy - userAge);
+let earthYearsOver = (userAge - lifeExpectancy);
+let ageInEachPlanetYears = [];
+let yearsLeftInEachPlanetYears = [];
+let yearsOverInEachPlanetYears = [];
 
-function convertUserAgeToEachPlanetYears(userAge) {
-  let ageInEachPlanetYears = [];
+function findAgeInEachPlanetYears(userAge) {
   ageInEachPlanetYears[0] = Math.round(userAge / 0.24);
   ageInEachPlanetYears[1] = Math.round(userAge / 0.62);
   ageInEachPlanetYears[2] = Math.round(userAge / 1.88);
@@ -124,13 +91,20 @@ function convertUserAgeToEachPlanetYears(userAge) {
   return ageInEachPlanetYears;
 }
 
-function convertLifeExpectancyToEachPlanetYears(lifeExpectancy) {
-  let expectancyInEachPlanetYears = [];
-  expectancyInEachPlanetYears[0] = Math.round(lifeExpectancy / 0.24);
-  expectancyInEachPlanetYears[1] = Math.round(lifeExpectancy / 0.62);
-  expectancyInEachPlanetYears[2] = Math.round(lifeExpectancy / 1.88);
-  expectancyInEachPlanetYears[3] = Math.round(lifeExpectancy / 11.86);
-  return expectancyInEachPlanetYears;
+function findYearsLeftEachPlanetYears(lifeExpectancy) {
+  yearsLeftInEachPlanetYears[0] = Math.round(lifeExpectancy / 0.24);
+  yearsLeftInEachPlanetYears[1] = Math.round(lifeExpectancy / 0.62);
+  yearsLeftInEachPlanetYears[2] = Math.round(lifeExpectancy / 1.88);
+  yearsLeftInEachPlanetYears[3] = Math.round(lifeExpectancy / 11.86);
+  return yearsLeftInEachPlanetYears;
+}
+
+function findYearsOverEachPlanetYears(lifeExpectancy) {
+  yearsOverInEachPlanetYears[0] = Math.round(lifeExpectancy / 0.24);
+  yearsOverInEachPlanetYears[1] = Math.round(lifeExpectancy / 0.62);
+  yearsOverInEachPlanetYears[2] = Math.round(lifeExpectancy / 1.88);
+  yearsOverInEachPlanetYears[3] = Math.round(lifeExpectancy / 11.86);
+  return yearsLeftInEachPlanetYears;
 }
 
 console.log("Age: " + convertUserAgeToEachPlanetYears(userAge));
@@ -138,17 +112,19 @@ console.log("Age: " + convertUserAgeToEachPlanetYears(userAge));
 console.log("Expectancy " + convertLifeExpectancyToEachPlanetYears(lifeExpectancy));
 
 
-function findYearsLeftOrOverExpectancy(userAge, lifeExpectancy) {
-  // 02-18 - continue working here
+
+
+function findYearsLeft(userAge, lifeExpectancy) {
+  if (Math.sign(earthYearsLeft) === -1) && earthYearsOver === Math.abs(earthYearsLeft) {
+    earthLifeExpectancyResult = `You have lived ${earthYearsOver} Earth years past your life expectancy.`
+  } else {
+    lifeExpectancyResult = `You have ${earthYearsLeft} Earth years left to live.`
+  }
+  return lifeExpectancyResult;
 }
 
 
 
-function calculateLifeExpectancy(userAge, lifeExpectancy) {
-  let earthYearsLeftOrOver = (lifeExpectancy - userAge);
-  return yearsLeftOrOver;
-  // This could be a negative number. We'll deal with that below.
-}
 
 function reportLifeExpectancy(yearsLeftOrOver) {
   let yearsLeftOrOver = calculateLifeExpectancy(userAge, lifeExpectancy);
