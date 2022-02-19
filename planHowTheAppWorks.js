@@ -25,9 +25,9 @@ $ node planHowTheAppWorks.js
 
 Expected input:
 
- - userAge
+ - ageInEarthYears
 
- - lifeExpectancy
+ - earthLifeExpectancy
 
 Expected output:
 
@@ -62,12 +62,15 @@ Convert years left or over into each planet's years.
 Display the user's age and years left or over in each planet's years
 (8 results total).
 
+*/
+
+
 export default class AgeCalculator {
-  constructor(userAge, lifeExpectancy) {
-    this.userAge = 35                  // userAge;
-    this.lifeExpectancy = 100          // lifeExpectancy;
-    this.earthYearsLeft = (lifeExpectancy - userAge);
-    this.earthYearsOver = (userAge - lifeExpectancy);
+  constructor(ageInEarthYears, earthLifeExpectancy) {
+    this.ageInEarthYears = 35;         // ageInEarthYears;
+    this.earthLifeExpectancy = 100;    // leave this one hard-coded. earthLifeExpectancy;
+    this.earthYearsLeft = (earthLifeExpectancy - ageInEarthYears);
+    this.earthYearsOver = (ageInEarthYears - earthLifeExpectancy);
     this.planetOrbitsPerEarthYear = {
       'Mercury': 0.24,
       'Venus': 0.62,
@@ -75,30 +78,34 @@ export default class AgeCalculator {
       'Jupiter': 11.86
     }
   }
-  
+  findAgeInEachPlanetYears(planet) {
+    return this.planetOrbitsPerEarthYear[planet];
+  }
 }
+
+let ageCalculator = new AgeCalculator ;
+
+console.log(`Jupiter's year is ${ageCalculator.planetOrgitsPerEarthYear[Jupiter]} times longer than Earth's.`);
+
 // Move some of the functions below into the class object above as methods.
 
-*/
-
-
-let userAge = 135;
-let lifeExpectancy = 100;
-let earthYearsLeft = (lifeExpectancy - userAge);
-let earthYearsOver = (userAge - lifeExpectancy);
+let ageInEarthYears = 135;
+let earthLifeExpectancy = 100;
+let earthYearsLeft = (earthLifeExpectancy - ageInEarthYears);
+let earthYearsOver = (ageInEarthYears - earthLifeExpectancy);
 let ageInEachPlanetYears = [];
 let yearsLeftInEachPlanetYears = [];
 let yearsOverInEachPlanetYears = [];
 
-function findAgeInEachPlanetYears(userAge) {
-  ageInEachPlanetYears[0] = Math.round(userAge / 0.24);
-  ageInEachPlanetYears[1] = Math.round(userAge / 0.62);
-  ageInEachPlanetYears[2] = Math.round(userAge / 1.88);
-  ageInEachPlanetYears[3] = Math.round(userAge / 11.86);
+function findAgeInEachPlanetYears(ageInEarthYears) {
+  ageInEachPlanetYears[0] = Math.round(ageInEarthYears / 0.24);
+  ageInEachPlanetYears[1] = Math.round(ageInEarthYears / 0.62);
+  ageInEachPlanetYears[2] = Math.round(ageInEarthYears / 1.88);
+  ageInEachPlanetYears[3] = Math.round(ageInEarthYears / 11.86);
   return ageInEachPlanetYears;
 }
 
-function findYearsLeftInEachPlanetYears(lifeExpectancy) {
+function findYearsLeftInEachPlanetYears(earthLifeExpectancy) {
   yearsLeftInEachPlanetYears[0] = Math.round(earthYearsLeft / 0.24);
   yearsLeftInEachPlanetYears[1] = Math.round(earthYearsLeft / 0.62);
   yearsLeftInEachPlanetYears[2] = Math.round(earthYearsLeft / 1.88);
@@ -106,7 +113,7 @@ function findYearsLeftInEachPlanetYears(lifeExpectancy) {
   return yearsLeftInEachPlanetYears;
 }
 
-function findYearsOverInEachPlanetYears(lifeExpectancy) {
+function findYearsOverInEachPlanetYears(earthLifeExpectancy) {
   yearsOverInEachPlanetYears[0] = Math.round(earthYearsOver / 0.24);
   yearsOverInEachPlanetYears[1] = Math.round(earthYearsOver / 0.62);
   yearsOverInEachPlanetYears[2] = Math.round(earthYearsOver / 1.88);
@@ -116,12 +123,12 @@ function findYearsOverInEachPlanetYears(lifeExpectancy) {
 
 function chooseYearsLeftOrOver() {
   if (earthYearsLeft === Math.abs(earthYearsLeft)) {
-    console.log(`You have ${findYearsLeftInEachPlanetYears(lifeExpectancy)[3]} of Jupiter's years left to live.`);
+    console.log(`You have ${findYearsLeftInEachPlanetYears(earthLifeExpectancy)[3]} of Jupiter's years left to live.`);
   } else if (Math.sign(earthYearsLeft) === -1) {
-    console.log(`You have lived ${findYearsOverInEachPlanetYears(lifeExpectancy)[3]} of Jupiter's years over your life expectancy.`);
+    console.log(`You have lived ${findYearsOverInEachPlanetYears(earthLifeExpectancy)[3]} of Jupiter's years over your life expectancy.`);
   }
 }
 
-console.log(`Your age on Jupiter is ${findAgeInEachPlanetYears(userAge)[3]}.`);
+console.log(`Your age on Jupiter is ${findAgeInEachPlanetYears(ageInEarthYears)[3]}.`);
 chooseYearsLeftOrOver();
 
