@@ -1,18 +1,21 @@
+// Once this works, erase it and re-write it one test at a time with TDD.
 
-export class UserAgeAndLifeExpectancy {
-  constructor(userAge, lifeExpectancy) {
-    this.userAge = userAge;
-    this.lifeExpectancy = lifeExpectancy;
-    this.yearsRemaining = lifeExpectancy - userAge;
-    this.yearsPastExpectancy = userAge - lifeExpectancy;
+export default class AgeCalculator {
+  constructor(ageInEarthYears, earthLifeExpectancy) {
+    this.ageInEarthYears = 35;         // ageInEarthYears;
+    this.earthLifeExpectancy = 100;    // leave this one hard-coded.
+earthLifeExpectancy;
+    this.earthYearsLeft = (earthLifeExpectancy - ageInEarthYears);
+    this.earthYearsOver = (ageInEarthYears - earthLifeExpectancy);
+    this.planetOrbitsPerEarthYear = {
+      'Mercury': 0.24,
+      'Venus': 0.62,
+      'Mars': 1.88,
+      'Jupiter': 11.86
+    }
   }
+  
 }
 
-export class PlanetOrbits {
-  constructor() {
-    this.mercury = 0.24;
-    this.venus = 0.62;
-    this.mars = 1.88;
-    this.jupiter = 11.86;
-  }
-}
+
+
