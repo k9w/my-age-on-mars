@@ -14,29 +14,8 @@ earthLifeExpectancy;
       'Jupiter': 11.86
     }
   }
-  findAgeInEachPlanetYears(this.planet) {
-    return this.planetOrbitsPerEarthYear[planet];
-  }
+  
 }
 
 
-
-// UI logic
-
-import $ from 'jquery';
-// import AgeCalculator from './js/business-logic.js';
-
-function clearFields() {
-  $('#result').text('');
-}
-
-function showResult(ageCalculator.ageInEarthYears) {
-  let ageCalculator = new AgeCalculator(age-input);
-  clearFields();
-  console.log(`Jupiter's year is ${ageCalculator.findAgeInEachPlanetYears(planet)} times longer than Earth's.`);
-
-$(#age-input).on('click', () => {
-  showResult(ageInEarthYears)
-});
-}
 
