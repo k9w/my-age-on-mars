@@ -62,13 +62,12 @@ Convert years left or over into each planet's years.
 Display the user's age and years left or over in each planet's years
 (8 results total).
 
-*/
-
-
 export default class AgeCalculator {
   constructor(userAge, lifeExpectancy) {
     this.userAge = 35                  // userAge;
     this.lifeExpectancy = 100          // lifeExpectancy;
+    this.earthYearsLeft = (lifeExpectancy - userAge);
+    this.earthYearsOver = (userAge - lifeExpectancy);
     this.planetOrbitsPerEarthYear = {
       'Mercury': 0.24,
       'Venus': 0.62,
@@ -79,6 +78,9 @@ export default class AgeCalculator {
   
 }
 // Move some of the functions below into the class object above as methods.
+
+*/
+
 
 let userAge = 135;
 let lifeExpectancy = 100;
