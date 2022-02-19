@@ -9,7 +9,7 @@ function clearFields() {
 
 let ageCalculator = new AgeCalculator(age-input);
 
-findAgeInEachPlanetYears(ageCalculator.planet) {
+function findAgeInEachPlanetYears(ageCalculator.planet) {
   return this.planetOrbitsPerEarthYear[planet];
 }
 
