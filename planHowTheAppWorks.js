@@ -91,33 +91,29 @@ function findAgeInEachPlanetYears(userAge) {
 }
 
 function findYearsLeftInEachPlanetYears(lifeExpectancy) {
-  yearsLeftInEachPlanetYears[0] = Math.round(lifeExpectancy / 0.24);
-  yearsLeftInEachPlanetYears[1] = Math.round(lifeExpectancy / 0.62);
-  yearsLeftInEachPlanetYears[2] = Math.round(lifeExpectancy / 1.88);
-  yearsLeftInEachPlanetYears[3] = Math.round(lifeExpectancy / 11.86);
+  yearsLeftInEachPlanetYears[0] = Math.round(earthYearsLeft / 0.24);
+  yearsLeftInEachPlanetYears[1] = Math.round(earthYearsLeft / 0.62);
+  yearsLeftInEachPlanetYears[2] = Math.round(earthYearsLeft / 1.88);
+  yearsLeftInEachPlanetYears[3] = Math.round(earthYearsLeft / 11.86);
   return yearsLeftInEachPlanetYears;
 }
 
 function findYearsOverInEachPlanetYears(lifeExpectancy) {
-  yearsOverInEachPlanetYears[0] = Math.round(lifeExpectancy / 0.24);
-  yearsOverInEachPlanetYears[1] = Math.round(lifeExpectancy / 0.62);
-  yearsOverInEachPlanetYears[2] = Math.round(lifeExpectancy / 1.88);
-  yearsOverInEachPlanetYears[3] = Math.round(lifeExpectancy / 11.86);
-  return yearsLeftInEachPlanetYears;
+  yearsOverInEachPlanetYears[0] = Math.round(earthYearsOver / 0.24);
+  yearsOverInEachPlanetYears[1] = Math.round(earthYearsOver / 0.62);
+  yearsOverInEachPlanetYears[2] = Math.round(earthYearsOver / 1.88);
+  yearsOverInEachPlanetYears[3] = Math.round(earthYearsOver / 11.86);
+  return yearsOverInEachPlanetYears;
 }
 
-findAgeInEachPlanetYears(userAge);
-findYearsLeftInEachPlanetYears(lifeExpectancy);
-findYearsOverInEachPlanetYears(lifeExpectancy);
-
-console.log("Age: " + convertUserAgeToEachPlanetYears(userAge));
-console.log("Expectancy " + convertLifeExpectancyToEachPlanetYears(lifeExpectancy));
-
-function chooseYearsLeftOrOver(earthYearsLeft, earthYearsOver) {
-  if (Math.sign(earthYearsLeft) === -1) && earthYearsOver === Math.abs(earthYearsLeft) {
-    earthLifeExpectancyResult = `You have lived ${earthYearsOver} Earth years past your life expectancy.`
-  } else {
-    lifeExpectancyResult = `You have ${earthYearsLeft} Earth years left to live.`
+function chooseYearsLeftOrOver() {
+  if (earthYearsLeft === Math.abs(earthYearsLeft)) {
+    console.log(`You have ${findYearsLeftInEachPlanetYears(lifeExpectancy)} of each planet's years left to live.`);
+  } else if (Math.sign(earthYearsLeft) === -1) {
+    console.log(`You have lived ${findYearsOverInEachPlanetYears(lifeExpectancy)} of each planets years over your life expectancy.`);
   }
-  return lifeExpectancyResult;
 }
+
+console.log(`Your age on each planet is ${findAgeInEachPlanetYears(userAge)}.`);
+chooseYearsLeftOrOver();
+
