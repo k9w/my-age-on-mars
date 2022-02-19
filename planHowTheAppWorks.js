@@ -62,19 +62,25 @@ Convert years left or over into each planet's years.
 Display the user's age and years left or over in each planet's years
 (8 results total).
 
+*/
+
 
 export default class AgeCalculator {
   constructor(userAge, lifeExpectancy) {
-    this.userAge = userAge;
-    this.lifeExpectancy = lifeExpectancy;
+    this.userAge = 35                  // userAge;
+    this.lifeExpectancy = 100          // lifeExpectancy;
+    this.planetOrbitsPerEarthYear = {
+      'Mercury': 0.24,
+      'Venus': 0.62,
+      'Mars': 1.88,
+      'Jupiter': 11.86
+    }
   }
   
 }
 // Move some of the functions below into the class object above as methods.
 
-*/
-
-let userAge = 35;
+let userAge = 135;
 let lifeExpectancy = 100;
 let earthYearsLeft = (lifeExpectancy - userAge);
 let earthYearsOver = (userAge - lifeExpectancy);
@@ -108,12 +114,12 @@ function findYearsOverInEachPlanetYears(lifeExpectancy) {
 
 function chooseYearsLeftOrOver() {
   if (earthYearsLeft === Math.abs(earthYearsLeft)) {
-    console.log(`You have ${findYearsLeftInEachPlanetYears(lifeExpectancy)} of each planet's years left to live.`);
+    console.log(`You have ${findYearsLeftInEachPlanetYears(lifeExpectancy)[3]} of Jupiter's years left to live.`);
   } else if (Math.sign(earthYearsLeft) === -1) {
-    console.log(`You have lived ${findYearsOverInEachPlanetYears(lifeExpectancy)} of each planets years over your life expectancy.`);
+    console.log(`You have lived ${findYearsOverInEachPlanetYears(lifeExpectancy)[3]} of Jupiter's years over your life expectancy.`);
   }
 }
 
-console.log(`Your age on each planet is ${findAgeInEachPlanetYears(userAge)}.`);
+console.log(`Your age on Jupiter is ${findAgeInEachPlanetYears(userAge)[3]}.`);
 chooseYearsLeftOrOver();
 
